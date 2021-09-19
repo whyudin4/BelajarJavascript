@@ -23,7 +23,7 @@ namaMantan.push("dewi");
 // console.log(indexOlip);
 // namaMantan.splice(indexOlip, 1);
 
-// console.log(namaMantan);
+console.log(namaMantan);
 
 const namaMantanLama = namaMantan.slice();
 
@@ -31,6 +31,14 @@ namaMantan.pop();
 
 
 
-console.log("Nama mantan: ", namaMantan);
+// console.log("Nama mantan: ", namaMantan);
 
-console.log("Nama mantan lama: ", namaMantanLama);
+// console.log("Nama mantan lama: ", namaMantanLama);
+
+console.log(
+    namaMantan.reduce(function(acc, mantan, ke)
+    {
+        acc[mantan] =  `Mantan ke ${ke +1};`
+        return acc
+    }, {})
+)
